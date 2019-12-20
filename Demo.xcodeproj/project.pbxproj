@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		0823657623AB3E90000B32E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823657523AB3E90000B32E2 /* AppDelegate.swift */; };
 		0823657823AB3E90000B32E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823657723AB3E90000B32E2 /* SceneDelegate.swift */; };
-		0823657A23AB3E90000B32E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823657923AB3E90000B32E2 /* ViewController.swift */; };
 		0823657D23AB3E90000B32E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0823657B23AB3E90000B32E2 /* Main.storyboard */; };
 		0823657F23AB3E92000B32E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0823657E23AB3E92000B32E2 /* Assets.xcassets */; };
 		0823658223AB3E92000B32E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0823658023AB3E92000B32E2 /* LaunchScreen.storyboard */; };
+		0823659023AB40FE000B32E2 /* SpreadsheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823658F23AB40FE000B32E2 /* SpreadsheetCell.swift */; };
+		0847C6FF23AB43140046CCC5 /* SpreadsheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0847C6FE23AB43140046CCC5 /* SpreadsheetViewController.swift */; };
+		0847C70123AB45060046CCC5 /* SpreadsheetViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0847C70023AB45060046CCC5 /* SpreadsheetViewLayout.swift */; };
+		0847C70323AC95EE0046CCC5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0847C70223AC95EE0046CCC5 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0823657223AB3E90000B32E2 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0823657523AB3E90000B32E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0823657723AB3E90000B32E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0823657923AB3E90000B32E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0823657C23AB3E90000B32E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0823657E23AB3E92000B32E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0823658123AB3E92000B32E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0823658323AB3E92000B32E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0823658F23AB40FE000B32E2 /* SpreadsheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadsheetCell.swift; sourceTree = "<group>"; };
+		0847C6FE23AB43140046CCC5 /* SpreadsheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadsheetViewController.swift; sourceTree = "<group>"; };
+		0847C70023AB45060046CCC5 /* SpreadsheetViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadsheetViewLayout.swift; sourceTree = "<group>"; };
+		0847C70223AC95EE0046CCC5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		0823657423AB3E90000B32E2 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				0823657523AB3E90000B32E2 /* AppDelegate.swift */,
-				0823657723AB3E90000B32E2 /* SceneDelegate.swift */,
-				0823657923AB3E90000B32E2 /* ViewController.swift */,
-				0823657B23AB3E90000B32E2 /* Main.storyboard */,
+				0823658E23AB3EBF000B32E2 /* mainscreen */,
+				0823658923AB3E99000B32E2 /* commons */,
 				0823657E23AB3E92000B32E2 /* Assets.xcassets */,
-				0823658023AB3E92000B32E2 /* LaunchScreen.storyboard */,
 				0823658323AB3E92000B32E2 /* Info.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		0823658923AB3E99000B32E2 /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				0823658B23AB3EA9000B32E2 /* util */,
+				0823658A23AB3EA4000B32E2 /* app */,
+			);
+			path = commons;
+			sourceTree = "<group>";
+		};
+		0823658A23AB3EA4000B32E2 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				0823657523AB3E90000B32E2 /* AppDelegate.swift */,
+				0823657723AB3E90000B32E2 /* SceneDelegate.swift */,
+				0823658023AB3E92000B32E2 /* LaunchScreen.storyboard */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		0823658B23AB3EA9000B32E2 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				0823658C23AB3EAF000B32E2 /* views */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		0823658C23AB3EAF000B32E2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				0823658F23AB40FE000B32E2 /* SpreadsheetCell.swift */,
+				0847C70023AB45060046CCC5 /* SpreadsheetViewLayout.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		0823658E23AB3EBF000B32E2 /* mainscreen */ = {
+			isa = PBXGroup;
+			children = (
+				0823657B23AB3E90000B32E2 /* Main.storyboard */,
+				0847C6FE23AB43140046CCC5 /* SpreadsheetViewController.swift */,
+				0847C70223AC95EE0046CCC5 /* DetailsViewController.swift */,
+			);
+			path = mainscreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0823657A23AB3E90000B32E2 /* ViewController.swift in Sources */,
 				0823657623AB3E90000B32E2 /* AppDelegate.swift in Sources */,
+				0847C6FF23AB43140046CCC5 /* SpreadsheetViewController.swift in Sources */,
+				0823659023AB40FE000B32E2 /* SpreadsheetCell.swift in Sources */,
 				0823657823AB3E90000B32E2 /* SceneDelegate.swift in Sources */,
+				0847C70123AB45060046CCC5 /* SpreadsheetViewLayout.swift in Sources */,
+				0847C70323AC95EE0046CCC5 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
